@@ -1,5 +1,5 @@
-port: 5140
-maxPort: 5149
+port: 11400
+maxPort: 11499
 
 plugins:
   group:basic:
@@ -10,15 +10,14 @@ plugins:
     ~inspect: {}
     locales: {}
     rate-limit: {}
+    ~shutdown: {}
+    verifier: {}
   group:console:
     analytics: {}
     ~auth: {}
     config: {}
-    console:
-      open: true
+    console: {}
     dataview: {}
-    desktop:
-      $if: env.KOISHI_AGENT?.includes('Desktop')
     explorer: {}
     logger: {}
     insight: {}
@@ -36,14 +35,10 @@ plugins:
     ~database-mongo: {}
     assets-local: {}
   group:adapter:
-    ~adapter-onebot: {}
-    ~adapter-discord: {}
-    ~adapter-telegram: {}
-    ~adapter-kook: {}
-    ~adapter-lark: {}
-    gocqhttp:
-      signServer: https://captcha.koishi.xyz/sdk/dandelion/energy
+    adapter-qqnt: {}
   group:develop:
     $if: env.NODE_ENV === 'development'
     hmr:
       root: '.'
+  group:extension:
+    blockly: {}
