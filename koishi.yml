@@ -10,7 +10,6 @@ plugins:
     ~inspect: {}
     locales: {}
     rate-limit: {}
-    ~shutdown: {}
     verifier: {}
   group:console:
     analytics: {}
@@ -35,7 +34,8 @@ plugins:
     ~database-mongo: {}
     assets-local: {}
   group:adapter:
-    adapter-qqnt: {}
+    adapter-qqnt:
+      token: ${{ env.QQNT_TOKEN }}
   group:develop:
     $if: env.NODE_ENV === 'development'
     hmr:

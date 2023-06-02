@@ -1,6 +1,6 @@
 {
   "name": "@koishi-nt/boilerplate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "files": [
     ".env",
@@ -81,7 +81,6 @@
     "koishi-plugin-assets-local": "^3.1.0",
     "koishi-plugin-blockly": "^0.6.2",
     "koishi-plugin-puppeteer": "^3.5.0",
-    "koishi-plugin-shutdown": "^0.3.0",
     "koishi-plugin-theme-vanilla": "^1.0.4",
     "koishi-plugin-verifier": "^1.1.1"
   }
